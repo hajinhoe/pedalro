@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<html>
+<head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106918650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106918650-1');
+</script>
+
+    <link rel="stylesheet" href="style/styles.css">
+    <title>페달로 정보 서비스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script> <!-- it is jquery.... 배워서 수정좀 ㅜㅜ -->
+    $(window).load(function() {
+        $('.menu').on('click', function (e) {
+            if ($(e.target).closest('ul').parent('nav.nav').length) {
+                if ($(this).hasClass('expanded')) {
+                    $(this).children('.submenu').hide();
+                    $(this).removeClass('expanded');
+                } else {
+                    $('.submenu').css('display', 'none');
+                    $(this).children('.submenu').show();
+                    $(this).addClass('expanded');
+                }
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+<div class="flex-container">
+    <header>
+        <h1>페달로 정보 서비스</h1>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a class="active" href="index.html">처음으로</a></li>
+            <li><a href="stations.php?station=all">전체</a></li>
+            <li><a href="stations.php?station=동별">동별</a></li>
+            <li class = "menu">
+                <a href="#railway">역별</a>
+                <ul class="submenu">
+                    <li><a href="stations.php?station=신길온천역">신길온천</a></li>
+                    <li><a href="stations.php?station=안산역">안산</a></li>
+                    <li><a href="stations.php?station=고잔역">고잔</a></li>
+                    <li><a href="stations.php?station=초지역">초지</a></li>
+                    <li><a href="stations.php?station=중앙역">중앙</a></li>
+                    <li><a href="stations.php?station=한양대앞">한대앞</a></li>
+                    <li><a href="stations.php?station=상록수역">상록수</a></li>
+                    <li><a href="stations.php?station=반월역">반월</a></li>
+                </ul>
+            </li>
+            <li class = "menu">
+                <a href="#univ">대학별</a>
+                <ul class="submenu">
+                    <li><a href="stations.php?station=한양대">에리카(한양대)</a></li>
+                    <li><a href="stations.php?station=서울예술대">서울예대</a></li>
+                    <li><a href="stations.php?station=30904">안산대</a></li>
+                    <li><a href="stations.php?station=신 안산대">신안산대</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <article class="article">
+        <h1>페달로 정보 서비스를 어플리케이션처럼 이용하기</h1>
+        <ol>
+            <li>처음 화면으로 삼고 싶은 페이지에 접속합니다.</li>
+            <li>아이폰의 경우 하단 중앙의 버튼을 누릅니다.</li>
+            <li>홈 화면에 추가를 누르면 홈 화면에서 바로 접근할 수 있습니다.</li>
+            <li>(타이틀 바가 사라져서 더 넓게 쓸 수 있으니 시도해 보세요!)</li>
+        </ol>
+        <h1>서비스가 느릴 때</h1>
+        <p>일시적으로 서비스가 느려지는 것은 정상입니다. 페달로 정보 서비스의 서버 사양이 좋지
+            않아서 동시 접속자가 많을 때, 또, 안산시 페달로 홈페이지에서 접속 지연이 발생할 경우, 서비스가 지연될 수 있습니다.</p>
+    </article>
+    <footer class="footer">
+        <p>작성 중입니다. <a href="../">페이지에 관한 문의</a></p>
+    </footer>
+</div>
+</body>
+</html>

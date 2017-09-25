@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<html>
+    <head>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106918650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106918650-1');
+</script>
+
+        <link rel="stylesheet" href="style/styles.css">
+        <title>페달로 정보 서비스</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <meta charset="UTF-8">
+        <!-- 아이폰 웹 앱 부분-->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- it is jquery.... 배워서 수정좀 ㅜㅜ -->
+        <script>
+        $(window).load(function() {
+            $('.menu').on('click', function (e) {
+                if ($(e.target).closest('ul').parent('nav.nav').length) {
+                    if ($(this).hasClass('expanded')) {
+                        $(this).children('.submenu').hide();
+                        $(this).removeClass('expanded');
+                    } else {
+                        $('.submenu').css('display', 'none');
+                        $(this).children('.submenu').show();
+                        $(this).addClass('expanded');
+                    }
+                }
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="flex-container">
+            <header>
+                <h1>페달로 정보 서비스</h1>
+            </header>
+
+            <nav class="nav">
+                <ul>
+                    <li><a class="active" href="index.html">처음으로</a></li>
+                    <li><a href="maps.html">지도</a></li>
+                    <li><a href="stations.php?station=all">전체</a></li>
+                    <li class = "menu">
+                        <a href="#railway">역별</a>
+                        <ul class="submenu">
+                            <li><a href="stations.php?station=신길온천역">신길온천</a></li>
+                            <li><a href="stations.php?station=안산역">안산</a></li>
+                            <li><a href="stations.php?station=고잔역">고잔</a></li>
+                            <li><a href="stations.php?station=초지역">초지</a></li>
+                            <li><a href="stations.php?station=중앙역">중앙</a></li>
+                            <li><a href="stations.php?station=한양대앞">한대앞</a></li>
+                            <li><a href="stations.php?station=상록수역">상록수</a></li>
+                            <li><a href="stations.php?station=반월역">반월</a></li>
+                        </ul>
+                    </li>
+                    <li class = "menu">
+                        <a href="#univ">대학별</a>
+                        <ul class="submenu">
+                            <li><a href="stations.php?station=한양대">에리카(한양대)</a></li>
+                            <li><a href="stations.php?station=서울예술대">서울예대</a></li>
+                            <li><a href="stations.php?station=30904">안산대</a></li>
+                            <li><a href="stations.php?station=신 안산대">신안산대</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <article class="article">
+                <section>
+                    <p id="iphone" style="background-color: wheat"><strong>아이폰 사용자는 "설정>사파리>고급>실험기능>CSS display:contents"를 켜주세요.</strong></p>
+                    <ul style="background-color: coral">
+                        <li>문의 및 건의는 이메일로 해주세요.</li>
+                        <li><a href = "help.html">페달로 정보 서비스를 어플리케이션 처럼 이용하기</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>공지사항</h1>
+                    <ul>
+                        <li>보안접속(https)를 적용하였습니다.</li>
+                        <li>지도에서 타이틀 바 옆의 내 위치 버튼을 쓸 수 있습니다.</li>
+                    </ul>
+                </section>
+                <section>
+                        <h1>개발을 하려고 하는 것</h1>
+                        <ul>
+                            <li>페달로 정거장 검색 기능</li>
+                            <li>페달로 선호 정거장 기능</li>
+                            <li>페달로 연계 교통 정보 기능</li>
+                        </ul>
+                </section>
+                <section>
+                    <h1>알려진 문제</h1>
+                    <ul>
+                        <li>메뉴 선택이 때때로 제대로 동작하지 않음</li>
+                    </ul>
+                </section>
+            </article>
+
+            <footer class="footer">
+                <p>페달로 정보 시스템 <a href="../">상위 페이지</a></p>
+            </footer>
+        </div>
+        <script> //iphone 사용자 CSS 안내문
+            var browser = navigator.userAgent;
+            if (browser.indexOf("iPhone") > 0) {
+            } else {
+                document.getElementById("iphone").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
